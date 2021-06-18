@@ -2,44 +2,57 @@
 
 ## users テーブル
 
-| Column   | Type    | Option   |
-| -------- | --------| -------- |
-|name      | string  | NOT NULL |
-|email     | string  | NOT NULL |
-|password  | string  | NOT NULL |
+| Column             | Type   | Option       |
+| ------------------ | -------| ------------ |
+| name               | string | NOT NULL     |
+| email              | string | unique: true |
+| encrypted_password | string | NOT NULL     |
 
 ### Association
 
 - has_many :items
-- has_many :comments
+- has_many :purchase_managements
 
 ## items テーブル
 
-| Column   | Type       | Option   |
-| -------- | ---------- | -------- |
-| text     | text       | NOT NULL |
-| image    |            |          |
-| category | string     | NOT NULL |
-| price    | integer    | NOT NULL |
-| user_id  | references |          |
+| Column   | Type       | Option            |
+| -------- | ---------- | ----------------- |
+| text     | text       | NOT NULL          |
+| category | string     | NOT NULL          |
+| price    | integer    | NOT NULL          |
+| user     | references | foreign_key: true |
 
 ### Association
 
-- belongs_to :users
-- has_many :comments
+- belongs_to :user
+- has_one :items
 
-## comments テーブル
+## purchase_managements テーブル
 
-| Column       | Type       | Option   |
-| ------------ | ---------- | -------- |
-| comment_text | text       | NOT NULL |
-| user_id      | references |          |
-| item_id      | references |          |
+| Column | Type       | Option            |
+| ------ | ---------- | ----------------- |
+| user   | references | foreign_key: true |
+| item   | references | foreign_key: true |
 
 ### Association
 
-- belongs_to :users
-- belongs_to :items
+- belongs_to :item
+- belongs_to :user
+- has_one :shipping_addresses
+
+## shipping_addresses テーブル
+
+| Column               | Type         | Option            |
+| -------------------- | ------------ | ----------------- |
+| postal_code          | integer      | NOT NULL          |
+| adress               | string       | NOT NULL          |
+| phone_number         | varchar(255) | NOT NULL          |
+| purchase_managements | references   | foreign_key: true |
+
+### Association
+
+- belongs_to : purchase_management
+
 
 
 
