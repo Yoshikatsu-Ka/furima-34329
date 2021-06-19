@@ -2,11 +2,14 @@
 
 ## users テーブル
 
-| Column             | Type   | Option       |
-| ------------------ | -------| ------------ |
-| name               | string | NOT NULL     |
-| email              | string | unique: true |
-| encrypted_password | string | NOT NULL     |
+| Column             | Type    | Option       |
+| ------------------ | ------- | ------------ |
+| nickname           | string  | null: false  |
+| email              | string  | unique: true |
+| encrypted_password | string  | null: false  |
+| name               | string  | null: false  |
+| name_kana          | string  | null: false  |
+| birthday           | integer | null: false  |
 
 ### Association
 
@@ -15,12 +18,16 @@
 
 ## items テーブル
 
-| Column   | Type       | Option            |
-| -------- | ---------- | ----------------- |
-| text     | text       | NOT NULL          |
-| category | string     | NOT NULL          |
-| price    | integer    | NOT NULL          |
-| user     | references | foreign_key: true |
+| Column            | Type       | Option            |
+| ----------------- | ---------- | ----------------- |
+| text              | text       | null: false       |
+| price             | integer    | null: false       |
+| user              | references | foreign_key: true | 
+| category          | string     | null: false       |
+| product condition | integer    | null: false       |
+| shipping charges  | string     | null: false       |
+| shipment source   | string     | null: false       |
+| date of shipment  | string     | null: false       |
 
 ### Association
 
@@ -42,12 +49,15 @@
 
 ## shipping_addresses テーブル
 
-| Column               | Type         | Option            |
-| -------------------- | ------------ | ----------------- |
-| postal_code          | integer      | NOT NULL          |
-| adress               | string       | NOT NULL          |
-| phone_number         | varchar(255) | NOT NULL          |
-| purchase_managements | references   | foreign_key: true |
+| Column              | Type       | Option            |
+| ------------------- | ---------- | ----------------- |
+| postal_code         | string     | null: false       |
+| prefecture          | string     | null: false       |
+| municipality        | string     | null: false       |
+| address             | string     | null: false       |
+| building_name       | string     | null: false       |
+| phone_number        | string     | null: false       |
+| purchase_management | references | foreign_key: true |
 
 ### Association
 
