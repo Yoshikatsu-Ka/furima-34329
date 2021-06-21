@@ -2,14 +2,16 @@
 
 ## users テーブル
 
-| Column             | Type    | Option       |
-| ------------------ | ------- | ------------ |
-| nickname           | string  | null: false  |
-| email              | string  | unique: true |
-| encrypted_password | string  | null: false  |
-| name               | string  | null: false  |
-| name_kana          | string  | null: false  |
-| birthday           | integer | null: false  |
+| Column             | Type   | Option                    |
+| ------------------ | ------ | ------------------------- |
+| nickname           | string | null: false               |
+| email              | string | unique: true, null: false |
+| encrypted_password | string | null: false               |
+| last_name          | string | null: false               |
+| first_name         | string | null: false               |
+| last_name_kana     | string | null: false               |
+| first_name_kana    | string | null: false               |
+| birthday           | date   | null: false               |
 
 ### Association
 
@@ -18,21 +20,22 @@
 
 ## items テーブル
 
-| Column            | Type       | Option            |
-| ----------------- | ---------- | ----------------- |
-| text              | text       | null: false       |
-| price             | integer    | null: false       |
-| user              | references | foreign_key: true | 
-| category          | string     | null: false       |
-| product condition | integer    | null: false       |
-| shipping charges  | string     | null: false       |
-| shipment source   | string     | null: false       |
-| date of shipment  | string     | null: false       |
+| Column               | Type       | Option            |
+| -------------------- | ---------- | ----------------- |
+| product_name         | string     | null: false       |
+| product_description  | text       | null: false       |
+| price                | integer    | null: false       |
+| user                 | references | foreign_key: true | 
+| category_id          | string     | null: false       |
+| product_condition_id | string     | null: false       |
+| shipping_charge_id   | string     | null: false       |
+| shipment_source_id   | string     | null: false       |
+| date_of_shipment_id  | integer    | null: false       |
 
 ### Association
 
 - belongs_to :user
-- has_one :items
+- has_one :purchase_management
 
 ## purchase_managements テーブル
 
@@ -45,7 +48,7 @@
 
 - belongs_to :item
 - belongs_to :user
-- has_one :shipping_addresses
+- has_one :shipping_address
 
 ## shipping_addresses テーブル
 
@@ -55,7 +58,7 @@
 | prefecture          | string     | null: false       |
 | municipality        | string     | null: false       |
 | address             | string     | null: false       |
-| building_name       | string     | null: false       |
+| building_name       | string     |                   |
 | phone_number        | string     | null: false       |
 | purchase_management | references | foreign_key: true |
 
