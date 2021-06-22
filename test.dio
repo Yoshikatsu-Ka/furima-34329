@@ -16,16 +16,16 @@
                 <mxCell id="6" value="items" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
                     <mxGeometry x="290" y="210" width="160" height="160" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="product_name&#10;product_description&#10;price&#10;user&#10;category&#10;product_condition&#10;shipping_charge&#10;shipment_source&#10;date_of_shipment" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="6">
+                <mxCell id="8" value="product_name&#10;product_description&#10;price&#10;user&#10;category_id&#10;product_condition_id&#10;shipping_charge_id&#10;shipment_source_id&#10;date_of_shipment_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="6">
                     <mxGeometry y="26" width="160" height="134" as="geometry"/>
                 </mxCell>
                 <mxCell id="10" value="purchase_managements" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
                     <mxGeometry x="150" y="420" width="160" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="user_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="10">
+                <mxCell id="11" value="user" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="10">
                     <mxGeometry y="26" width="160" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="12" value="item_id&#10;&#10;&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="10">
+                <mxCell id="12" value="item&#10;&#10;&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="10">
                     <mxGeometry y="56" width="160" height="34" as="geometry"/>
                 </mxCell>
                 <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=ERmany;endFill=0;" edge="1" parent="1" source="4">
@@ -45,7 +45,7 @@
                 <mxCell id="26" value="shipping_addresses" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
                     <mxGeometry x="150" y="600" width="160" height="126" as="geometry"/>
                 </mxCell>
-                <mxCell id="31" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;postal_code&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;prefecture&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;municipality&lt;/span&gt;&lt;/div&gt;&lt;span&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;address&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;building_name&lt;/span&gt;&lt;/div&gt;&lt;span&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;phone_number&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left&quot;&gt;purchase_management&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="26">
+                <mxCell id="31" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;postal_code&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;prefecture_id&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;municipality&lt;/span&gt;&lt;/div&gt;&lt;span&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;address&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;building_name&lt;/span&gt;&lt;/div&gt;&lt;span&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;phone_number&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left&quot;&gt;purchase_management&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="26">
                     <mxGeometry y="26" width="160" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=classic;endFill=1;entryX=-0.012;entryY=0.15;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="12" target="31">
